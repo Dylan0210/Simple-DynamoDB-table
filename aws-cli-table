@@ -1,2 +1,11 @@
 #Create DynamoDB table
 aws dynamodb create-table --table-name Music --attribute-definitions AttributeName=Artist,AttributeType=S AttributeName=SongTitle,AttributeType=S --key-schema AttributeName=Artist,KeyType=HASH AttributeName=SongTitle,KeyType=RANGE --provisioned-throughput ReadCapacityUnits=4,WriteCapacityUnits=4
+
+#Write data to the table
+aws dynamodb put-item --table-name Music  --item '{"Artist": {"S": "42 Dugg"}, "SongTitle": {"S": "Soon"}, "Genre": {"S": "Rap"} }'
+
+aws dynamodb put-item --table-name Music  --item '{"Artist": {"S": "Lil Durk"}, "SongTitle": {"S": "What Happened to Virgil"}, "Genre": {"S": "Rap"} }'
+
+aws dynamodb put-item --table-name Music --item '{"Artist": {"S": "Walker Hayes"}, "SongTitle": {"S": "Fancy Like"}, "Genre": {"S": "Country"} }'
+
+aws dynamodb put-item --table-name Music --item '{"Artist": {"S": "Chris Stapleton"}, "SongTitle": {"S": "Tennessee Whiskey"}, "Genre": {"S": "Country"} }'
