@@ -9,3 +9,6 @@ aws dynamodb put-item --table-name Music  --item '{"Artist": {"S": "Lil Durk"}, 
 aws dynamodb put-item --table-name Music --item '{"Artist": {"S": "Walker Hayes"}, "SongTitle": {"S": "Fancy Like"}, "Genre": {"S": "Country"} }'
 
 aws dynamodb put-item --table-name Music --item '{"Artist": {"S": "Chris Stapleton"}, "SongTitle": {"S": "Tennessee Whiskey"}, "Genre": {"S": "Country"} }'
+
+#Delete table
+aws dynamodb delete-table --table-name Music
